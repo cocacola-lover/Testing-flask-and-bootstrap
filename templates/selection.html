@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Astronaut selection</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h1 class="text-center">Анкета претендента</h1>
+            <h2 class="text-center">на участие в мисии</h2>
+
+            <form class="bg-danger-subtle p-3">
+                <input type="text" class="form-control" placeholder="Введите фамилию">
+                <input type="text" class="form-control" placeholder="Введите имя">
+
+                <input type="text" class="form-control mt-5" placeholder="Введите адрес почты">
+
+                <label for="eduselect" class="form-label">Какое у вас образование?</label>
+                <select id="eduselect" class="form-select">
+                    <option>Начальное</option>
+                    <option>Высшее</option>
+                </select>
+
+                <label class="mt-2">Какие у вас есть профессии?</label>
+
+                <div class="form-check">
+                    <input type="checkbox" id="profpilot" class="form-check-input"></input>
+                    <label for="profpilot" class="form-check-label">Пилот</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" id="profengeneer" class="form-check-input"></input>
+                    <label for="profengeneer" class="form-check-label">Инженер</label>
+                </div>
+
+                <label class="mt-2">Укажите пол</label>
+
+                <div class="form-check">
+                    <input class="form-check-input" name="sex" type="radio" id="sexmale">
+                    <label class="form-check-label" for="sexmale">
+                      Мужчина
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" name="sex" type="radio" id="sexfemale" checked>
+                    <label class="form-check-label" for="sexfemale">
+                      Женщина
+                    </label>
+                  </div>
+
+
+                  <div><label for="motivation">Почему вы хотите учавствовать в миссии?</label></div>
+                  <textarea id="motivation" class="w-100"></textarea>
+
+                  <div><label for="photo">Приложите фотографию</label></div>
+                  <input type="file" id="photo" placeholder="hey">
+
+                  <div>
+                    <button class="btn btn-primary mt-3 mb-3" type="submit">Отправить</button>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

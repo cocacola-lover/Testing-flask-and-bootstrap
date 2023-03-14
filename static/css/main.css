@@ -1,0 +1,25 @@
+body {
+    margin : 0;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    min-height: 50px;
+    background-color: aqua;
+}
+
+table {
+    width: 30%;
+}
+
+td, th {
+    border : 1px solid black;
+}
